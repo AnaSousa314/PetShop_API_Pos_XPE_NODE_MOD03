@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.post("/", AnimalController.createAnimal);
 router.put("/", AnimalController.updateAnimal);
+router.delete("/:id", AnimalController.deleteAnimal);
 
 export default router;

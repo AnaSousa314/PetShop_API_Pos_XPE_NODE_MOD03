@@ -8,7 +8,12 @@ async function updateAnimal(animal) {
   return await AnimalRepository.updateAnimal(animal);
 }
 
+async function deleteAnimal(id) {
+  await AnimalRepository.deleteAnimal(id);
+}
+
 export default {
   createAnimal,
-  updateAnimal
+  updateAnimal,
+  deleteAnimal
 }

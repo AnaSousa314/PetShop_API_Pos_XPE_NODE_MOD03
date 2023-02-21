@@ -31,8 +31,21 @@ async function updateAnimal(req, res, next) {
   }
 }
 
+async function deleteAnimal(req, res, next) {
+  try {
+    await AnimalService.deleteAnimal(req.params.id);
+    res.sendStatus(204);
+    res.end();
+    logger.info("DELETE /animal");
+  } catch (err) {
+    next(err);
+  }
+}
+
+
 
 export default {
   createAnimal,
-  updateAnimal
+  updateAnimal,
+  deleteAnimal
 }
