@@ -12,7 +12,10 @@ async function deleteAnimal(id) {
   await AnimalRepository.deleteAnimal(id);
 }
 
-async function getAnimals() {
+async function getAnimals(proprietarioId) {
+  if (proprietarioId) {
+    return await AnimalRepository.getAnimalsByOwnerID(proprietarioId)
+  }
   return await AnimalRepository.getAnimals();
 }
 

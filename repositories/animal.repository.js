@@ -67,7 +67,18 @@ async function getAnimal(id) {
   } finally {
     conn.release();
   }
+}
 
+async function getAnimalsByOwnerID(ownerId) {
+  const conn = await connect();
+  try {
+    const res = await conn.query("SELECT * FROM animais WHERE proprietario_id = $1", [ownerId]);
+    return res.rows;
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
 }
 
 export default {
@@ -75,5 +86,6 @@ export default {
   updateAnimal,
   deleteAnimal,
   getAnimals,
-  getAnimal
+  getAnimal,
+  getAnimalsByOwnerID
 }

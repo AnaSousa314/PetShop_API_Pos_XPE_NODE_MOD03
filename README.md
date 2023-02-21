@@ -57,7 +57,7 @@
         - Método HTTP: GET   
         - Parâmetros: id do animal passado diretamente na URL, exemplo de um id de valor 15 passado na URL: http://localhost:3000/animal/15   
 
-[ ] 06 - Consulta  dos  animais  de  um  proprietário  em  específico  (pegar  o  id  do proprietário na URL e retornar uma lista dos seus animais, sendo cada animal representado por um objeto JSON com todas as propriedades).  
+[👽] 06 - Consulta  dos  animais  de  um  proprietário  em  específico  (pegar  o  id  do proprietário na URL e retornar uma lista dos seus animais, sendo cada animal representado por um objeto JSON com todas as propriedades).  
         - URL: http://localhost:3000/animal?proprietario_id={proprietario_id}  
         - Método HTTP: GET   
         - Parâmetros: id do proprietário passado diretamente na URL, exemplo de um id de valor 15 passado na URL http://localhost:3000/animal?proprietario_id=15 . Sugestão: pode serusado a mesma estrutura do endpoint do item 4 que consulta todos os animais, só que aqui nesse caso ele receberia um parâmetro para filtrar o proprietário). 
