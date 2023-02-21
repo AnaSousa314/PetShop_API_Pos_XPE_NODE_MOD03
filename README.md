@@ -37,8 +37,8 @@
         - Método HTTP: GET  
         - Parâmetros: objeto JSON com o nome do animal, tipo do animal e o id do proprietário deste animal.   
 
-[ ] 02 - Atualização de um animal.  
-        - URL: http://localhost:8000/animal/{animal_id}  
+[👽] 02 - Atualização de um animal.  
+        - URL: http://localhost:8000/animal/  
         - Método HTTP: PUT   
         - Parâmetros:  objeto  JSON  com  o  id  do  animal  que  será  atualizado  o nome, tipo e id do proprietário do animal que serão atualizados.   
 

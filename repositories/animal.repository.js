@@ -15,7 +15,26 @@ async function insertAnimal(animal) {
   }
 }
 
+async function updateAnimal(animal) {
+  const conn = await connect();
+  try {
+    const sql = `
+      UPDATE animais
+        SET nome = $1, tipo = $2, proprietario_id = $3
+        WHERE animal_id = $4 RETURNING *
+    `;
+
+    const values = [animal.nome, animal.tipo, animal.proprietario_id, animal.animal_id];
+    const res = await conn.query(sql, values);
+    return res.rows[0];
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+}
 
 export default {
-  insertAnimal
+  insertAnimal,
+  updateAnimal
 }

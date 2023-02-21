@@ -4,6 +4,11 @@ async function createAnimal(animal) {
   return await AnimalRepository.insertAnimal(animal);
 }
 
+async function updateAnimal(animal) {
+  return await AnimalRepository.updateAnimal(animal);
+}
+
 export default {
-  createAnimal
+  createAnimal,
+  updateAnimal
 }
