@@ -16,11 +16,16 @@ async function getOwners() {
   return await OwnerRepository.getOwners();
 }
 
+async function getOwner(id) {
+  return await OwnerRepository.getOwner(id);
+}
+
 
 
 export default {
   createOwner,
   deleteOwner,
   updateOwner,
-  getOwners
+  getOwners,
+  getOwner
 }

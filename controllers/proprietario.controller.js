@@ -51,9 +51,19 @@ async function getOwners(req, res, next) {
   }
 }
 
+async function getOwner(req, res, next){
+  try {
+    res.send(await OwnerService.getOwner(req.params.id));
+    logger.info("GET /proprietario");
+  } catch (err) {
+    next(err)
+  }
+}
+
 export default {
   createOwner,
   updateOwner,
   deleteOwner,
-  getOwners
+  getOwners,
+  getOwner
 }

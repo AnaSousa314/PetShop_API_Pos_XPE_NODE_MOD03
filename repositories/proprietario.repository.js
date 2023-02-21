@@ -57,10 +57,24 @@ async function getOwners() {
     }
 }
 
+async function getOwner(id) {
+  const conn = await connect();
+  try {
+    const res = await conn.query(`SELECT * FROM proprietarios WHERE proprietario_id = $1`, [id]);
+    return res.rows[0];
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+
+}
+
 
 
 export default {
   getOwners,
+  getOwner,
   insertOwner,
   updateOwner,
   deleteOwner
