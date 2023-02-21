@@ -52,7 +52,7 @@
         - Método HTTP: GET   
         - Parâmetros: sem parâmetros.    
 
-[ ] 05 - Consulta de um animal em específico (pegar o id do animal e retornar um objeto JSON com suas informações).   
+[👽] 05 - Consulta de um animal em específico (pegar o id do animal e retornar um objeto JSON com suas informações).   
         - URL: http://localhost:3000/animal/{animal_id}  
         - Método HTTP: GET   
         - Parâmetros: id do animal passado diretamente na URL, exemplo de um id de valor 15 passado na URL: http://localhost:3000/animal/15   

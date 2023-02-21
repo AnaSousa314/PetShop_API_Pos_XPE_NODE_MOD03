@@ -57,9 +57,23 @@ async function getAnimals() {
   }
 }
 
+async function getAnimal(id) {
+  const conn = await connect();
+  try {
+    const res = await conn.query(`SELECT * FROM animais WHERE animal_id = $1`, [id]);
+    return res.rows[0];
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+
+}
+
 export default {
   insertAnimal,
   updateAnimal,
   deleteAnimal,
-  getAnimals
+  getAnimals,
+  getAnimal
 }

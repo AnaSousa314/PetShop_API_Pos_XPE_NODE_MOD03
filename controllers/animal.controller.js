@@ -51,11 +51,21 @@ async function getAnimals(req, res, next) {
   }
 }
 
+async function getAnimal(req, res, next) {
+  try {
+    res.send(await AnimalService.getAnimal(req.params.id));
+    logger.info("GET /animal/:id");
+  } catch (err) {
+    next(err);
+  }
+}
+
 
 
 export default {
   createAnimal,
   updateAnimal,
   deleteAnimal,
-  getAnimals
+  getAnimals,
+  getAnimal
 }

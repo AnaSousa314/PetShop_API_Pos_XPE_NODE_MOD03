@@ -54,7 +54,7 @@ async function getOwners(req, res, next) {
 async function getOwner(req, res, next){
   try {
     res.send(await OwnerService.getOwner(req.params.id));
-    logger.info("GET /proprietario");
+    logger.info("GET /proprietario/:id");
   } catch (err) {
     next(err)
   }
