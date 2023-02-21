@@ -3,6 +3,7 @@ import winston from "winston";
 import cors from "cors";
 
 import ownersRouter from "./routes/proprietario.route.js";
+import animalsRouter from "./routes/animal.route.js";
 
 
 const { combine, timestamp, label, printf } = winston.format;
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/proprietario", ownersRouter);
+app.use("/animal", animalsRouter);
 
 app.use((err, req, res, next) => {
   logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);

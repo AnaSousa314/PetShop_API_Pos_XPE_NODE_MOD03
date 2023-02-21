@@ -32,8 +32,8 @@
 
 ### Lista de Endpoints Animais  
 
-[ ] 01 - Criação de um animal:  
-        - URL: http://localhost:8000/animal 
+[👽] 01 - Criação de um animal:  
+        - URL: http://localhost:8000/animal/  
         - Método HTTP: GET  
         - Parâmetros: objeto JSON com o nome do animal, tipo do animal e o id do proprietário deste animal.   
 
