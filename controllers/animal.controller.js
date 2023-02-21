@@ -42,10 +42,20 @@ async function deleteAnimal(req, res, next) {
   }
 }
 
+async function getAnimals(req, res, next) {
+  try {
+    res.send(await AnimalService.getAnimals());
+    logger.info("GET /animal");
+  } catch (err) {
+    next(err);
+  }
+}
+
 
 
 export default {
   createAnimal,
   updateAnimal,
-  deleteAnimal
+  deleteAnimal,
+  getAnimals
 }

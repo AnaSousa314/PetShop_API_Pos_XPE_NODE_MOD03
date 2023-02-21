@@ -12,8 +12,13 @@ async function deleteAnimal(id) {
   await AnimalRepository.deleteAnimal(id);
 }
 
+async function getAnimals() {
+  return await AnimalRepository.getAnimals();
+}
+
 export default {
   createAnimal,
   updateAnimal,
-  deleteAnimal
+  deleteAnimal,
+  getAnimals
 }

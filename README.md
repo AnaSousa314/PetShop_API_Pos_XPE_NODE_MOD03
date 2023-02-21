@@ -47,7 +47,7 @@
         - Método HTTP: DELETE
         - Parâmetros: id do animal passado diretamente na URL, exemplo de um id de valor 15 passado na URL: http://localhost:3000/animal/15.  
 
-[ ] 04 - Consulta de todos os animais (retornar uma lista com todos os animais, sendo cada animal representado por um objeto JSON com todas as propriedades.  
+[👽] 04 - Consulta de todos os animais (retornar uma lista com todos os animais, sendo cada animal representado por um objeto JSON com todas as propriedades.  
         - URL: http://localhost:3000/animal
         - Método HTTP: GET   
         - Parâmetros: sem parâmetros.    

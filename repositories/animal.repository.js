@@ -45,8 +45,21 @@ async function deleteAnimal(id) {
   }
 }
 
+async function getAnimals() {
+  const conn = await connect();
+  try {
+    const res = await conn.query("SELECT * FROM animais");
+    return res.rows;
+  } catch (err) {
+    throw err;
+  } finally {
+    conn.release();
+  }
+}
+
 export default {
   insertAnimal,
   updateAnimal,
-  deleteAnimal
+  deleteAnimal,
+  getAnimals
 }
